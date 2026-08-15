@@ -39,7 +39,7 @@ const empty: Values = { name: "", phone: "", email: "", interest: "", message: "
  * to plug in a server function / email service later without touching the UI.
  */
 async function submitLead(_values: Values): Promise<void> {
-  // TODO: connect to Lovable Cloud (server function + leads table) before launch.
+  // TODO: connect to a server function or backend API before launch.
   await new Promise((r) => setTimeout(r, 700));
 }
 

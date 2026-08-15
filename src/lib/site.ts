@@ -1,6 +1,6 @@
 /** Single source of truth for brand + contact details used across the site. */
 
-export const SITE_URL = "https://pixel-love-layout.lovable.app";
+export const SITE_URL = "https://zenith.lumiwaves.in";
 
 export const COMPANY = "Lumiwaves";
 export const PRODUCT = "Zenith";

@@ -13,7 +13,7 @@ import { MotionConfig } from "motion/react";
 
 import appCss from "../styles.css?url";
 import { ADDRESS_LINES, EMAIL, PHONE_E164, SITE_URL } from "../lib/site";
-import { reportLovableError } from "../lib/lovable-error-reporting";
+
 
 function NotFoundComponent() {
   return (
@@ -58,7 +58,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    // Error reporting removed
   }, [error]);
 
   return (
