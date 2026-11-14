@@ -1,4 +1,4 @@
-export type SceneId = "day" | "evening" | "movie" | "night" | "away";
+export type SceneId = "day" | "evening" | "movie" | "night";
 
 export interface DeviceState {
   name: string;
@@ -40,7 +40,7 @@ export interface SmartHomeScene {
   };
   securityState: {
     status: string;
-    mode: "unarmed" | "perimeter" | "night" | "away";
+    mode: "unarmed" | "perimeter" | "night";
     isLocked: boolean;
   };
   devices: DeviceState[];
@@ -347,79 +347,6 @@ export const smartHomeScenes: SmartHomeScene[] = [
       lightingWarmth: "10deg",
       draperyWidth: "0%",
       ambientOpacity: "0.85",
-    },
-  },
-  {
-    id: "away",
-    name: "Away Mode",
-    subtitle: "Departure",
-    headline: "All Systems Powered Off • Motorized Curtains Closed",
-    description:
-      "All lights, displays, and audio are completely turned off to cut phantom energy. Motorized shades close over the side window for privacy and thermal protection, while biometric deadbolts lock and 360° radar sentry activates.",
-    image: "/assets/control-home.jpg",
-    lightingState: {
-      label: "All Circuits Turned Off",
-      level: 0,
-      colorTemp: "All Lights Off (0W)",
-      modeName: "Standby Off",
-      glowClass: "from-black/70 to-black/85",
-      overlayGradient: "rgba(0, 0, 0, 0.58)",
-    },
-    curtainState: {
-      label: "Side Window Shades",
-      percentage: 0,
-      status: "Curtains Closed on Window",
-    },
-    climateState: {
-      tempC: 24.0,
-      mode: "eco",
-      label: "24.0°C • Eco Standby (0W Phantom Cut)",
-    },
-    audioState: {
-      status: "Powered Off (0W Standby)",
-      source: "Disconnected",
-      active: false,
-    },
-    securityState: {
-      status: "Fortress Sentry Armed • Radar Sonar Active",
-      mode: "away",
-      isLocked: true,
-    },
-    devices: [
-      {
-        name: "All Lighting Circuits",
-        category: "lighting",
-        status: "Switched Off Completely",
-        metric: "OFF",
-        active: false,
-      },
-      {
-        name: "Side Window Curtains",
-        category: "curtains",
-        status: "Motorized Shades Fully Closed",
-        metric: "Closed",
-        active: true,
-      },
-      {
-        name: "AV & Sound Systems",
-        category: "audio",
-        status: "0W Phantom Power Cut",
-        metric: "OFF",
-        active: false,
-      },
-      {
-        name: "Biometric Deadbolts",
-        category: "security",
-        status: "All Portals Locked & Armed",
-        metric: "ARMED",
-        active: true,
-      },
-    ],
-    cssVariables: {
-      lightingBrightness: "0.40",
-      lightingWarmth: "0deg",
-      draperyWidth: "100%",
-      ambientOpacity: "0.90",
     },
   },
 ];

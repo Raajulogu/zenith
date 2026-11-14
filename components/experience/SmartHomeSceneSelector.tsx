@@ -1,5 +1,5 @@
 import React from "react";
-import { Sun, Sunset, Film, Moon, Shield } from "lucide-react";
+import { Sun, Sunset, Film, Moon } from "lucide-react";
 import { SmartHomeScene, SceneId } from "@/data/scenes";
 
 interface SmartHomeSceneSelectorProps {
@@ -25,8 +25,6 @@ export function SmartHomeSceneSelector({
         return <Film className="w-4 h-4" />;
       case "night":
         return <Moon className="w-4 h-4" />;
-      case "away":
-        return <Shield className="w-4 h-4" />;
       default:
         return <Sun className="w-4 h-4" />;
     }

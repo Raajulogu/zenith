@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { SmartHomeScene } from "@/data/scenes";
 import { Sparkles } from "lucide-react";
-import { MotorizedWindowCurtain } from "./MotorizedWindowCurtain";
 
 interface SmartHomeSceneViewerProps {
   scene: SmartHomeScene;
@@ -47,22 +46,6 @@ export function SmartHomeSceneViewer({
           opacity: scene.cssVariables.ambientOpacity,
         }}
       />
-
-      {/* 3. Motorized Architectural Drapery (Pure vector component matching 3D room perspective) */}
-      <div
-        className="curtain-layer absolute inset-0 pointer-events-none"
-        style={{
-          clipPath:
-            scene.id === "away"
-              ? "polygon(29.4% 0%, 60% 0%, 60% 100%, 29.4% 100%)"
-              : "polygon(29.4% 0%, 29.4% 0%, 29.4% 100%, 29.4% 100%)",
-          opacity: scene.id === "away" ? 1 : 0,
-          transition:
-            "clip-path 1.05s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease-in-out",
-        }}
-      >
-        <MotorizedWindowCurtain isClosed={scene.id === "away"} />
-      </div>
 
       {/* Subtle top/bottom framing vignettes */}
       <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/60 to-transparent pointer-events-none" />
