@@ -8,13 +8,20 @@ export const metadata: Metadata = {
     "Transform your residence into a smarter, safer, and effortless sanctuary with Zenith's luxury residential automation ecosystem.",
   keywords: [
     "smart home",
+    "smart life",
+    "home automation",
+    "zenith automation",
+    "zenith automations",
+    "smart switches",
+    "smart panels",
+    "puducherry",
     "luxury home automation",
     "circadian lighting",
     "motorized shading",
     "biometric security",
     "architectural technology",
     "Zenith",
-    "Lumiwaves",
+    "Lumiwaves"
   ],
   authors: [{ name: "Zenith by Lumiwaves" }],
   icons: {
