@@ -1,0 +1,22 @@
+{
+  "name": "Zenith – Luxury Smart Home Automation",
+  "short_name": "Zenith",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffcc00",
+  "description": "Premium smart‑home solutions for Puducherry and beyond.",
+  "icons": [
+    {
+      "src": "/assets/zenith-logo-white.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/zenith-logo-white.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
+
